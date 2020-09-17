@@ -1,0 +1,18 @@
+<%- include ("layouts/header") %>
+<form action="/editprofile" method="get">
+    <br><label for="label">NAMA</label>
+    <br><input type="text" value="<%= nama %>" readonly>
+    <br>
+    <br><label for="label">EMAIL</label>
+    <br><input type="text" value="<%= email %>" readonly>
+    <br>
+    <br><label for="label">PASSWORD</label>
+    <br><input type="password" value="<%= password %>" readonly>
+    <br>
+    <br><button>Edit Profile</button>
+</form>
+
+<a href="/logout"><button>Logout</button></a>
+<!-- <p><h1> NAMA : <%= nama %></h1></p>
+<p><h3> EMAIL : <%= email %></h3></p>
+<p><h3> PASSWORD : <%= password %></h3></p> -->

@@ -1,0 +1,18 @@
+<%- include ("layouts/header") %>
+<form action="/editCart/<%= data.id %>" method="POST">
+    <div>
+        <div>
+            <label for="label">NAMA</label>
+            <input type="text" name="nama" placeholder="NAMA" value="<%= data.nama %>" readonly>
+        </div>
+        <div>
+            <label for="label">HARGA</label>
+            <input type="text" name="harga" placeholder="HARGA" value="<%= data.harga %>" readonly>
+        </div>
+        <div>
+            <label for="label">JUMLAH</label>
+            <input type="number" name="jumlah" placeholder="JUMLAH" value="<%= data.jumlah %>" required>
+        </div>
+    </div>
+        <button type="submit">Save</button>
+</form>

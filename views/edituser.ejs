@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit</title>
+</head>
+<body>
+    <%- include ("layouts/headeradmin") %>
+    <form action="/admin/edituser/<%= data._id %>" method="POST">
+        <div>
+            <div class="field">
+                <label for="label">Nama</label>
+                <input type="text" name="nama" placeholder="Nama" value="<%= data.nama %>" readonly>
+            </div>
+            <div class="field">
+                <label for="label">Email</label>
+                <input type="text" name="email" placeholder="Nama Email" value="<%= data.email %>" readonly>
+            </div>
+            <div class="field">
+                <label for="label">Password</label>
+                <input type="password" name="password" placeholder="Password" value="<%= data.password %>" readonly>
+            </div>
+            <div class="field">
+                <label for="label">Status</label>
+                <input type="text" name="status" placeholder="Status" value="<%= data.status %>">
+            </div>
+        </div>
+            <button type="submit">Save</button>
+    </form>
+</body>

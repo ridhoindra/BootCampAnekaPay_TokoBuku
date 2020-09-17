@@ -1,0 +1,44 @@
+<%- include ("layouts/header") %>
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit</title>
+</head>
+<body>
+    <form action="/tambahCart/<%= data._id %>" method="POST">
+        <div>
+            <div>
+                <label for="label">Judul Buku</label>
+                <input type="text" name="nama" value="<%= data.nama %>" readonly>
+            </div>
+            <div>
+                <label for="label">Author</label>
+                <input type="text" name="author" value="<%= data.author %>" readonly>
+            </div>
+            <div>
+                <label for="label">Penerbit</label>
+                <input type="text" name="penerbit" value="<%= data.penerbit %>" readonly>
+            </div>
+            <div>
+                <label for="label">Tahun Terbit</label>
+                <input type="number" name="tahun_terbit" value="<%= data.tahun_terbit %>" readonly>
+            </div>
+            <div>
+                <label for="label">Harga</label>
+                <input type="number" name="harga" value="<%= data.harga %>" readonly>
+            </div>
+            <div>
+                <label for="label">Stok</label>
+                <input type="number" name="stok" value="<%= data.stok %>" readonly>
+            </div>
+            <div>
+                <label for="label">Jumlah yang akan dibeli</label>
+                <input type="number" name="beli" placeholder="jumlah beli" required>
+            </div>
+        </div>
+        <button type="submit">Save</button>
+    </form>
+</body>

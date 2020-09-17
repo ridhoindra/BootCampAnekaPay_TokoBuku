@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tambah</title>
+</head>
+<body>
+    <%- include ("layouts/headeradmin") %>
+    <form action="/admin/add" method="POST">
+        <div>
+            <div>
+                <label for="label">Judul Buku</label>
+                <input type="text" name="nama" placeholder="Nama" required>
+            </div>
+            <div>
+                <label for="label">Author</label>
+                <input type="text" name="author" placeholder="Author" required>
+            </div>
+            <div>
+                <label for="label">Penerbit</label>
+                <input type="text" name="penerbit" placeholder="Penerbit" required>
+            </div>
+            <div>
+                <label for="label">Tahun Terbit</label>
+                <input type="number" name="tahun_terbit" placeholder="Tahun Terbit" required>
+            </div>
+            <div>
+                <label for="label">Harga</label>
+                <input type="number" name="harga" placeholder="Harga" required>
+            </div>
+            <div>
+                <label for="label">Stok</label>
+                <input type="number" name="stok" placeholder="Stok" required>
+            </div>
+        </div>
+        <button type="submit">Save</button>
+    </form>
+</body>

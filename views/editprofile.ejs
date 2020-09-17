@@ -1,0 +1,18 @@
+<%- include ("layouts/header") %>
+<form action="/editprofile/<%= id %>" method="POST">
+    <div>
+        <div>
+            <label for="label">NAMA</label>
+            <input type="text" name="nama" placeholder="Nama" value="<%= nama %>">
+        </div>
+        <div>
+            <label for="label">EMAIL</label>
+            <input type="text" name="email" placeholder="Enter players name" value="<%= email %>">
+        </div>
+        <div>
+            <label for="label">PASWORD</label>
+            <input type="text" name="password" placeholder="Enter coach name" value="<%= password %>">
+        </div>
+    </div>
+        <button type="submit">Save</button>
+</form>

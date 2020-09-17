@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD</title>
+</head>
+
+<body>
+    <%- include ("layouts/header") %>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama Barang</th>
+                <th>Jumlah</th>
+                <th>Harga</th>
+                <th>Tanggal Transaksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach((data)=>{%>
+            <tr>
+                <td><%- data.namaBarang %></td>
+                <td><%- data.jumlah %></td>
+                <td><%- data.harga %></td>
+                <td><%- data.tgl_transaksi %></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

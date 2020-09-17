@@ -1,0 +1,43 @@
+<%- include ("layouts/header") %>
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Aksi</th>
+                <th>Judul</th>
+                <th>Harga</th>
+                <th>Jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach((cart)=>{%>
+            <tr>
+                <td><a href="/hapusCart/<%= cart.id %>"><button>Hapus cart</button></a></td>
+                <td><a href="/editCart/<%= cart.id %>"><button>Edit cart</button></a></td>
+                <td><%= cart.nama %></td>
+                <td><%= cart.harga %></td>
+                <td><%= cart.jumlah %></td>
+                
+            </tr>
+            <% }); %>
+            
+        </tbody>
+    </table>
+    <form action="/beli" method="POST">
+        <br> <h1>Total Harga = <%= fharga %> </h1> <a href="/beli"><button>Beli</button></a>
+    </form>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>

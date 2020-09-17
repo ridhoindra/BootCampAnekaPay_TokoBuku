@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit</title>
+</head>
+<body>
+    <%- include ("layouts/headeradmin") %>
+    <form action="/admin/edit/<%= data._id %>" method="POST">
+        <div>
+            <div class="field">
+                <label for="label">Judul Buku</label>
+                <input type="text" name="nama" placeholder="Nama" value="<%= data.nama %>">
+            </div>
+            <div class="field">
+                <label for="label">Author</label>
+                <input type="text" name="author" placeholder="Nama Author" value="<%= data.author %>">
+            </div>
+            <div class="field">
+                <label for="label">Penerbit</label>
+                <input type="text" name="penerbit" placeholder="Penerbit" value="<%= data.penerbit %>">
+            </div>
+            <div class="field">
+                <label for="label">Tahun Terbit</label>
+                <input type="number" name="tahun_terbit" placeholder="Tahun Terbit" value="<%= data.tahun_terbit %>">
+            </div>
+            <div class="field">
+                <label for="label">Harga</label>
+                <input type="number" name="harga" placeholder="Harga" value="<%= data.harga %>">
+            </div>
+            <div>
+                <label for="label">Stok</label>
+                <input type="number" name="stok" placeholder="Stok" value="<%= data.stok %>">
+            </div>
+        </div>
+            <button type="submit">Save</button>
+    </form>
+</body>

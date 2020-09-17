@@ -1,0 +1,24 @@
+<%- include ("layouts/headeradmin") %>
+<table>
+    <thead>
+        <tr>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>status</th>
+            <th>Created_at</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% data.forEach((data)=>{%>
+        <tr>
+            <td><%- data.nama %></td>
+            <td><%- data.email %></td>
+            <td><%- data.status %></td>
+            <td><%- data.created_at %></td>
+            <td><a href="/admin/edituser/<%= data._id %>"><button>Edit</button></a></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+<a href="/logout"><button>Logout</button></a>
